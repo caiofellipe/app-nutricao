@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+      <form action="">
+        <div class="form-row">
+            <div class="form-group col-4">
+                <label for="descriptionProduto">Descrição do Produto</label>
+                <input type="text" name="" class="form-control" id="descriptionProduto" >
+            </div>
+            <div class="form-group col-4">
+                <label for="marcaProduto">Marca</label>
+                <select name="" class="form-control" id="marcaProduto" >
+                    <option value="">Marca 01</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="categoriaProduto">Tipo/Categoria</label>
+                <select name="" class="form-control" id="categoriaProduto" >
+                    <option value="">Categoria 01</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="grupoProduto">Grupo</label>
+                <select name="" class="form-control" id="grupoProduto" >
+                    <option value="">Grupo 01</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="subGrupoProduto">Sub-Grupo</label>
+                <select name="" class="form-control" id="subGrupoProduto" >
+                    <option value="">Sub-Grupo 01</option>
+                </select>
+            </div>
+            <div class="form-group col-4 align-self-end">
+              <button class="btn btn-outline-primary w-100">Enviar</button>
+            </div>
+        </div>
+      </form>
+
+    </div>
+    <div class="row mt-5">
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Grupo</th>
+                <th scope="col">Sub-Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prod of product;" (click)="onSelect(prod)">
+                <th scope="row">{{ prod.id }}</th>
+                <td>{{ prod.description }}</td>
+                <td>{{ prod.marca }}</td>
+                <td>{{ prod.modelo }}</td>
+                <td>{{ prod.categoria }}</td>
+                <td>{{ prod.grupo }}</td>
+                <td>{{ prod.subGrupo }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
